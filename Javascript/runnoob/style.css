@@ -8,7 +8,7 @@ div {
   position: relative;
   text-align: center;
 }
-
+/*.代表class */
 .b1 {
   border: 2px solid gold;
   border-style: dashed;
@@ -21,6 +21,7 @@ div {
   background-color: brown;
 }
 
+/*#代表id */
 #abc {
   font-family: "Verdana";
   font-size: 25px;
