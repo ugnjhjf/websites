@@ -1,0 +1,27 @@
+div {
+  width: 400px;
+  margin: 0 auto;
+  border: 10px solid orange;
+  border-style: outset;
+  padding: 25px;
+
+  position: relative;
+  text-align: center;
+}
+
+.b1 {
+  border: 2px solid gold;
+  border-style: dashed;
+  background-color: antiquewhite;
+}
+
+.warn {
+  border: 2px solid grey;
+  border-style: double;
+  background-color: brown;
+}
+
+#abc {
+  font-family: "Verdana";
+  font-size: 25px;
+}

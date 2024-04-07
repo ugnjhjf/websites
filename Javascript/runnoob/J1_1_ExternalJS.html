@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>GNetwork | Javascript tutorial</title>
+  </head>
+  <body>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="myScript.js"></script>
+    <h1>我的 Web 页面</h1>
+    <p id="demo">一个段落。</p>
+    <p>现在时间是<span id="ctime"></span></p>
+
+    <div id="abc">Dynmaic Content Area</div>
+    <div id="buttons">
+      <button class="b1" type="button" onclick="myFunction()">点击这里</button>
+
+      <button class="warn" type="button" onclick="makeAlert()">
+        显示Alert
+      </button>
+      <button type="button" onclick="changeABC()">更改abcabc</button>
+      <button type="button" onclick="overwriteWeb()">overwriteWeb</button>
+      <button type="button" onclick="refreshTime()">refreshTime</button>
+
+      <button type="button" onclick="addA()">addA</button>
+      <button type="button" onclick="showA()">showA</button>
+      <p><b>注释：</b>myFunction 保存在名为 "myScript.js" 的外部文件中。</p>
+    </div>
+    <script>
+      function overwriteWeb() {
+        document.write(Date());
+        //所有内容都会被覆写
+      }
+    </script>
+  </body>
+</html>
