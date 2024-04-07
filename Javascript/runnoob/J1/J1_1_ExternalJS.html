@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <!-- 网页基本信息 -->
+    <meta charset="utf-8" />
+    <meta name="JS tutorial" />
+    <meta name="Rokidna G" />
+    <meta name="description" content="JS tutorial" />
+    <title>GNetwork | Javascript tutorial</title>
+  </head>
+  <body>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="myScript.js"></script>
+    <h1>我的 Web 页面</h1>
+    <p id="demo">一个段落。</p>
+    <p>现在时间是<span id="ctime"></span></p>
+
+    <div id="abc">Dynmaic Content Area</div>
+    <div id="buttons">
+      <button class="b1" type="button" onclick="myFunction()">点击这里</button>
+      <!--函数在外部JS文件myScript.js中 -->
+
+      <button class="warn" type="button" onclick="makeAlert()">
+        显示Alert
+      </button>
+      <button type="button" onclick="changeABC()">更改abcabc</button>
+      <button type="button" onclick="overwriteWeb()">overwriteWeb</button>
+      <button type="button" onclick="refreshTime()">refreshTime</button>
+
+      <button type="button" onclick="addA()">addA</button>
+      <button type="button" onclick="showA()">showA</button>
+      <p><b>注释：</b>myFunction 保存在名为 "myScript.js" 的外部文件中。</p>
+     <!-- 内置JS演示 -->
+    <script>
+      function overwriteWeb() {
+        document.write(Date());
+        //所有内容都会被覆写
+      }
+    </script>
+
+      <!-- URL超链接和图片嵌入演示 -->
+      <a href="https://anime.gnetwork.space"
+        >前往OneAnime <img src="./src/img/A.jpg" alt="七海" width="25"
+      /></a>
+    </div>
+
+    <!--表格演示-->
+    <table border="1">
+      <thead>
+        <tr>
+        <th>列标题1</th>
+        <th>列标题2</th>
+      </tr>
+      <tbody>
+        <tr>
+          <td>行1，列1</td>
+          <td>行1，列2</td>
+        </tr>
+        <tr>
+          <td>行2，列1</td>
+          <td>行2，列2</td>
+        </tr>
+      </tbody>
+      </thead>
+    </table>
+    <!-- 列表演示 -->
+    <!-- 无序列表 Not in order -->
+    <ul>
+      <li>Milk</li>
+      <li>Coffee</li>
+      <li>Tea</li>
+    </ul>
+    <!-- 有序列表 In order -->
+    <ol>
+      <li>First</li>
+      <li>Second</li>
+    </ol>
+<!-- 自定义列表 -->
+<dl>
+  <dt>Coffee</dt>
+  <dd>- black hot drink</dd>
+  <dd></dd>
+  <dt>Milk</dt>
+  <dd>- Hokkaido Milk</dd>
+</dl>
+  </body>
+</html> 

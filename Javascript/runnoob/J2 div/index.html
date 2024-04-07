@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 分栏示例 -->
+    <div id="container" style="width: 500px">
+
+    <div id="header" style="background-color: #ffa500">
+    <h1 style="margin-bottom: 0">主要的网页标题</h1><div>
+
+        <div id="menu" style="background-color: #FFD700;height:200px;width:100px;float:left">
+        <b>菜单</b><br>
+        HTML<br>
+        CSS<br>
+        Javascript<br></div>
+
+        <div id="content" style="background-color: #EEEEFF;height:200px;width:400px;float:left">内容在这里</div>
+        
+        <div id="footer" style="background-color: #FFA500;clear:both;text-align:center;">
+        版权 © runoob.com</div>
+
+        </div>
+<!-- 表单示例 -->
+        <form action="/" method="post">
+            <!-- 文本输入框 -->
+            <label for="name">UserName:</label>
+            <input type="text" id="name" name="name" required>
+
+            <br>
+            <!-- 密码输入框 -->
+            <label for="password">Password:</label>
+            <input type="text" id="password" name="password" required>
+
+            <!-- 单选按钮 -->
+
+            <!-- 这样是一组 -->
+            <label> Gender:</label>
+            <input type="radio" id="male" name="gender" value="male" checked>
+            <label for ="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" checked>
+            <label for="female">Female</label>
+            
+            <br>
+            <!-- checked =  默认勾选, unchecked = 不勾选 -->
+            <!-- 复选框-->
+            <p1>Subscribe us through:</p1>
+            <input type="checkbox" id="email" name="email" value="email" checked>
+            <label for="email">Email</label>
+            <input type="checkbox" id="SMS" name="SMS" value="SMS" unchecked>
+            <label for="SMS">SMS</label>
+
+            <!-- 下拉列表 -->
+            <label for="region">Region/Country:</label>
+            <select id="Country" name="Country">
+                <option value="China">China</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+                <option value="Japan">Japan</option>
+            </select>
+
+            <br>
+
+            <!-- 提交 -->
+
+            <input type="submit" value="提交">
+            </form>
+  </body>
+</html>
