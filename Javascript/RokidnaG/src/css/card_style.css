@@ -6,7 +6,7 @@
   left: 50% !important;
   transform: translate(
     50%,
-    -10%
+    -35%
   ) !important; /* 向左和向上偏移自身的50%，实现完全居中 */
   width: 350px;
   height: 250px; /* 可以调整为 450px 视觉效果更佳 */
