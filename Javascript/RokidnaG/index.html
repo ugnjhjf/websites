@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/css/card_style.css" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GNetwork | Home</title>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">GNetwork</a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+    <section class="banner"></section>
+    <script type="text/javascript">
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
+    </script>
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+      <link rel="stylesheet" href="style.css">
+      <title>Animated Profile Card</title>
+    </head>
+    
+    <body>
+      <div class="card">
+        <div class="imgBx">
+          <img src="./src/assets/images/Echidna.png">
+        </div>
+        <div class="content">
+          <div class="details">
+            <h2>Rokidna G<br><span>Unreal Developer</span><br><span>Backend Developer</span></h2>
+            <div class="data">
+              <h3>342<br><span>Posts</span></h3>
+              <h3>120k<br><span>Followers</span></h3>
+              <h3>285<br><span>Following</span></h3>
+            </div>
+            <div class="actionBtn">
+              <button onclick="openGithub()">GitHub Page</button>   
+              <button onclick="sendEmail()">Message</button>
+            </div>
+            <button class="actionBtn" id="homebtn" onclick="goBackHome()"><h2>To Home Page</h2></button></div>
+          </div>
+        </div>
+      </div>
+      
+    </body>
+    
+    </html>
+  </body>
+</html>
