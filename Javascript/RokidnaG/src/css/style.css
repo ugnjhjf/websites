@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap");
+
+/*Navigate Bar Section*/
 * {
   margin: 0;
   padding: 0;
@@ -54,7 +59,21 @@ header ul li {
   position: relative;
   list-style: none;
 }
+/*Navigate Bar itemsSection*/
+header .CV {
+  color: orange;
+}
+header .home {
+  color: rebeccapurple;
+}
 
+header .contact {
+  color: gold;
+  font-family: "Homemade Apple", cursive;
+  font-weight: 600;
+  font-size: 1em;
+  font-style: normal;
+}
 header ul li a {
   position: relative;
   margin: 0 15px;
