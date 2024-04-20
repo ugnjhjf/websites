@@ -103,7 +103,8 @@ header.sticky .logo,
 header.sticky ul li a {
   color: #000;
 }
-
+/*Navigate Bar Section END*/
+/* Footer Section */
 .footer {
   color: white;
   padding: 2px;
@@ -124,12 +125,17 @@ header.sticky ul li a {
   padding: 10px;
 }
 
+.footer .heart {
+  color: red;
+}
+/* Footer Section END*/
 /* Scroll bar Section */
 
 .scroll-down {
   height: 60px; /* 增加高度以容纳文字 */
   width: 130px; /* 增加宽度以更好地居中显示文字 */
-  border: 2px solid white;
+  /* border: 2px solid white; */
+  border: 0px transparent;
   position: absolute;
   left: 50%;
   bottom: 20px;
@@ -145,10 +151,16 @@ header.sticky ul li a {
 
 .scroll-down span {
   order: 2; /* 确保文字显示在箭头下方 */
-  padding-top: 5%; /* 在文字与箭头之间添加一些空间 */
+  padding-top: 50%; /* 在文字与箭头之间添加一些空间 */
   font-size: 14px; /* 设置文字大小 */
   color: white; /* 设置文字颜色 */
   text-align: center; /* 确保文字水平居中 */
+  animation: scroll-down 1.5s ease-in-out infinite;
+
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  font-style: normal;
 }
 
 .scroll-down::before,
@@ -163,7 +175,7 @@ header.sticky ul li a {
   border: 2px solid white;
   border-top: transparent;
   border-left: transparent;
-  animation: scroll-down 1s ease-in-out infinite;
+  animation: scroll-down 1.5s ease-in-out infinite;
 }
 
 .scroll-down::before {
@@ -187,3 +199,4 @@ header.sticky ul li a {
     opacity: 0;
   }
 }
+/* Scroll bar Section END */
