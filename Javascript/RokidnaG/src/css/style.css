@@ -74,6 +74,7 @@ header .contact {
   font-size: 1em;
   font-style: normal;
 }
+/*Navigate Bar itemsSection END*/
 header ul li a {
   position: relative;
   margin: 0 15px;
@@ -99,21 +100,34 @@ header ul li a:hover {
   align-items: center; /* 这两行用于使用 Flexbox 进行居中 */
 }
 
+.banner.project {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../assets/images/bg_project.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* 这两行用于使用 Flexbox 进行居中 */
+}
+
 header.sticky .logo,
 header.sticky ul li a {
   color: #000;
 }
+
 /*Navigate Bar Section END*/
 /* Footer Section */
 .footer {
-  color: white;
-  padding: 2px;
+  color: black;
+  padding: 3px;
+  margin: none;
   border-radius: 5px;
   border: none;
   outline: none;
   font-size: 1em;
   font-weight: 500;
-  background: grey;
+  background: white;
   position: relative;
   display: flex;
   justify-content: center;

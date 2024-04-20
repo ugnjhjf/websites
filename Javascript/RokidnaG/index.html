@@ -4,25 +4,25 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./src/css/card_style.css" />
     <link rel="stylesheet" href="./src/css/style.css" />
-
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GNetwork | Home</title>
   </head>
   <body>
+
     <header>
-      <a href="#" class="logo"><span>GNetwork</span><br><span class="author">RokidnaG</span></a>
+      <a href="#" class="logo"><span>GNetwork</span><br><span class="author">by RokidnaG</span></a>
 
       <ul>
         <li><a href="#"><span class="home">Home</span></a></li>
         <li><a href="#">About</a></li>
         <li><a href="#"><span class="CV">CV</span></a></li>
-        <li><a href="#">Projects</a></li>
+        <li><a href="./projects/index.html"><span class="project">Projects</span></a></li>
         <li><a href="#">Services</a></li>
-        <li><a href="#"><span class="contact">Contact</span></a></li>
+        <li class="animate__animated animate__wobble"><a href="#"><span class="contact">Contact</span></a></li>
       </ul>
     </header>
     <section class="banner"></section>
-    <script src="./src/js/bannerChangeDetect.js"></script>
     <script type="text/javascript">
       window.addEventListener("scroll", function () {
         var header = document.querySelector("header");
@@ -52,20 +52,41 @@
 <!-- Scroll Down tips -->
     <div>
       <button class="scroll-down" onclick="gotoP2()">
-          <span>Explore</span>  <!-- 添加的文字 -->
+         <a href="#project"><span>Explore</span>  <!-- 添加的文字 --></a> 
       </button>
   </div>
+
+
+  <section id="project" class="banner project"></section>
+  <script type="text/javascript">
+    window.addEventListener("scroll", function () {
+      var header = document.querySelector("header");
+      header.classList.toggle("sticky", window.scrollY > 0);
+    });
+  </script>
+
   
     <div class="footer">
-
       <ul>
-        <li>About</li>
-        <li>Contact</li>
-        <br>
-        <li>Rokidna G | Made with <span class="heart">❤</span></li>
+        <li>Twitter</li>
+        <li>Instagarm</li>
+        <li>Telegram</li>
+        <li>WhatsAPP</li>
+        <li>Email</li>
       </ul>
+      </div>
+
+      <div class="footer">
+        <ul>
+          <li>Rokidna G | Made with <span class="heart">❤</span></li>
+        </ul>
+      <u1>
+</div>
+  
   <!-- 音乐播放器 -->
 
-
-
+  <!-- <template>
+    Scroll down to see the bottom-right button.
+    <el-backtop target=".page-component__scroll .el-scrollbar__wrap"></el-backtop>
+  </template> -->
 </html>
