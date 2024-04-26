@@ -2,91 +2,110 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- CSS input -->
     <link rel="stylesheet" href="./src/css/card_style.css" />
     <link rel="stylesheet" href="./src/css/style.css" />
-    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <!-- JS input -->
+
+    <script src="./src/js/main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GNetwork | Home</title>
   </head>
   <body>
-
     <header>
-      <a href="#" class="logo"><span>GNetwork</span><br><span class="author">by RokidnaG</span></a>
-
+      <a href="#" class="logo"
+        ><span>GNetwork</span><br /><span class="author">by RokidnaG</span></a
+      >
       <ul>
-        <li><a href="#"><span class="home">Home</span></a></li>
+        <li>
+          <a href="#"><span class="home">Home</span></a>
+        </li>
         <li><a href="#">About</a></li>
-        <li><a href="#"><span class="CV">CV</span></a></li>
-        <li><a href="./projects/index.html"><span class="project">Projects</span></a></li>
+        <li>
+          <a href="#"><span class="CV">CV</span></a>
+        </li>
+        <li>
+          <a href="./projects/index.html"
+            ><span class="project">Projects</span></a
+          >
+        </li>
         <li><a href="#">Services</a></li>
-        <li class="animate__animated animate__wobble"><a href="#"><span class="contact">Contact</span></a></li>
+        <li class="animate__animated animate__wobble">
+          <a href="#"><span class="contact">Contact</span></a>
+        </li>
       </ul>
     </header>
     <section class="banner"></section>
-    <script type="text/javascript">
-      window.addEventListener("scroll", function () {
-        var header = document.querySelector("header");
-        header.classList.toggle("sticky", window.scrollY > 0);
-      });
-    </script>
     <div class="card">
       <div class="imgBx">
-        <img src="./src/assets/images/Echidna.png">
+        <img src="./src/assets/images/Echidna.png" />
       </div>
       <div class="content">
         <div class="details">
-          <h2>Rokidna G<br><span>Unreal Developer</span><br><span>Backend Developer</span></h2>
+          <h2>
+            Rokidna G<br /><span>Unreal Developer</span><br /><span
+              >Backend Developer</span
+            >
+          </h2>
           <div class="data">
-            <h3>342<br><span>Posts</span></h3>
-            <h3>120k<br><span>Followers</span></h3>
-            <h3>285<br><span>Following</span></h3>
+            <h3>342<br /><span>Posts</span></h3>
+            <h3>120k<br /><span>Followers</span></h3>
+            <h3>285<br /><span>Following</span></h3>
           </div>
           <div class="actionBtn">
-            <button onclick="openGithub()">GitHub Page</button>   
+            <button onclick="openGithub()">GitHub Page</button>
             <button onclick="sendEmail()">Message</button>
           </div>
-          <button class="actionBtn" id="homebtn" onclick="goBackHome()"><h2>To Home Page</h2></button></div>
+          <button class="actionBtn" id="homebtn" onclick="goBackHome()">
+            <h2>To Home Page</h2>
+          </button>
         </div>
       </div>
     </div>
-<!-- Scroll Down tips -->
-    <div>
-      <button class="scroll-down" onclick="gotoP2()">
-         <a href="#project"> 
-      </button>
-  </div>
-
-
-  <section id="project" class="banner project"></section>
-  <script type="text/javascript">
-    window.addEventListener("scroll", function () {
-      var header = document.querySelector("header");
-      header.classList.toggle("sticky", window.scrollY > 0);
-    });
-  </script>
-
-  
+    <section id="scroll-down1">
+      <div class="container">
+        <a href="#project">
+          <div class="scroll-down"></div>
+        </a>
+      </div>
+    </section>
+    <section id="project" class="banner project"></section>
+    <div class="footer">
+      <div class="wrapper">
+        <div class="icon github">
+          <div class="tooltip">Github</div>
+          <span><i class="fab fa-github"></i></span>
+        </div>
+        <div class="icon whatsapp">
+          <div class="tooltip">Whatsapp</div>
+          <span><i class="fab fa-whatsapp"></i></span>
+        </div>
+        <div class="icon instagram">
+          <div class="tooltip">Instagram</div>
+          <span><i class="fab fa-instagram"></i></span>
+        </div>
+        <div class="icon weixin">
+          <div class="tooltip">Wechat</div>
+          <span><i class="fab fa-weixin"></i></span>
+        </div>
+        <div class="icon linkedin">
+          <div class="tooltip">Linkedin</div>
+          <span><i class="fab fa-linkedin"></i></span>
+        </div>
+      </div>
+    </div>
     <div class="footer">
       <ul>
-        <li>Twitter</li>
-        <li>Instagarm</li>
-        <li>Telegram</li>
-        <li>WhatsAPP</li>
-        <li>Email</li>
+        <li>Rokidna G | Made with <span class="heart">❤</span></li>
       </ul>
-      </div>
-
-      <div class="footer">
-        <ul>
-          <li>Rokidna G | Made with <span class="heart">❤</span></li>
-        </ul>
-      <u1>
-</div>
-  
-  <!-- 音乐播放器 -->
-
-  <!-- <template>
-    Scroll down to see the bottom-right button.
-    <el-backtop target=".page-component__scroll .el-scrollbar__wrap"></el-backtop>
-  </template> -->
+    </div>
+  </body>
 </html>

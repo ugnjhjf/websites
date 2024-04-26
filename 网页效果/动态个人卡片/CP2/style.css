@@ -1,11 +1,12 @@
-
-@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900'); 
-
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+html {
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -50,7 +51,7 @@ body {
   height: 250px;
 }
 
-.imgBx img{
+.imgBx img {
   position: absolute;
   top: 0;
   left: 0;
@@ -136,7 +137,7 @@ body {
   background: #fff;
 }
 
-#homebtn{
+#homebtn {
   text-align: center;
   background: #66ccff;
   border: none;
