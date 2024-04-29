@@ -25,7 +25,7 @@ function openGithub() {
 }
 
 function sendEmail() {
-  window.location.href = "mailto:your.email@example.com";
+  window.location.href = "mailto:rokidna@outlook.com";
 }
 
 function goBackHome() {

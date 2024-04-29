@@ -9,6 +9,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  border-radius: 11px;
 }
 
 html {
@@ -20,10 +21,12 @@ body {
 }
 
 header .author {
-  font-size: 0.55em;
+  font-size: 0.35em;
   padding: 0px;
   top: 50%;
+  color:violet
 }
+
 header {
   position: fixed;
   top: 0;
@@ -126,7 +129,10 @@ header.sticky ul li a {
   color: black;
   padding: 3px;
   margin: none;
-  border-radius: 5px;
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+  border-bottom-left-radius:0px ;
+  border-bottom-right-radius: 0px;
   border: none;
   outline: none;
   font-size: 1em;
@@ -136,6 +142,13 @@ header.sticky ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.footer-rokidna{
+  border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;
 }
 .footer li {
   font-size: 70%;
@@ -165,6 +178,10 @@ header.sticky ul li a {
   align-items: center; /* 水平居中对齐子项 */
   justify-content: center; /* 垂直居中对齐子项 */
   padding: 10px 0; /* 添加内边距以避免内容触摸边界 */
+}
+
+.scroll-down-right {
+  left: 80%;
 }
 
 /*.scroll-down span {
