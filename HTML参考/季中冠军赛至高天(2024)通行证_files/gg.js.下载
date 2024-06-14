@@ -1,0 +1,2 @@
+//此文件用于生成广告地址，您可以按实际情况修改“”引号中的地址
+setTimeout('document.getElementById("ost_gg").href="https://lpl.qq.com/es/lpl/2023/?ADTAG=cooperation.inner.lolwebtop";',10);/*  |xGv00|d3b3e3f77ec7f096458efcf9ae350c7a */

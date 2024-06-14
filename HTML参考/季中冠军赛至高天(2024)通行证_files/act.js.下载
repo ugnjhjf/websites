@@ -1,0 +1,55 @@
+// 查询领取状态
+var flow_1033404 = {
+    actId: '637440',
+    token: 'a3d38c',
+    sData: {
+    },
+    success: function (res) {
+        console.log("buy_score", res.details.modRet.sOutValue1);
+        let buyStatus = res.details.modRet.sOutValue1;
+        Comm.setTakeBtnStatus(buyStatus);
+    },
+    fail: function (res) {
+        if (res.iRet == 101) {
+            //todo 登录态失效，需要重新调登录方法 （开发自行实现）
+        } else if (res.iRet == 99998) {
+            // todo 调用提交绑定大区方法
+        }
+        console.log(res);
+    }
+}
+
+/**
+ * 购买礼包
+*/
+var flow_1033371 = {
+    actId: '637440',
+    token: '549c45',
+    sData: {
+        gameId: "lol", // 业务简称
+        djcActId: "32515", // 道聚城活动id
+        paytype: "2" // 1：点券 2：人民币 3：金币 4：点券+金币 5：金币2
+    },
+    // 支付弹框关闭回调
+    onPayClose: function () {
+
+    },
+    success: function (res) {
+        console.log(res);
+        Comm.setTakeBtnStatus(1);
+        TGDialogS('pop_pay2');
+    },
+    fail: function (res) {
+        if (res.iRet == 101) {
+            //todo 登录态失效，需要重新调登录方法 （开发自行实现）
+            login_act();
+        } else if (res.iRet == 99998) {
+            // todo 调用提交绑定大区方法
+            commitBindArea();
+        } else if (res.iRet == 302) {
+            Comm.showTips("活动已结束");
+        } else { 
+            Comm.showTips(res.sMsg);
+        }
+    }
+}

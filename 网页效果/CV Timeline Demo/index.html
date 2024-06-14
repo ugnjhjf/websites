@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        position: relative;
+        padding-left: 20px;
+      }
+      .vertical-line {
+        position: absolute;
+        left: 40px;
+        top: 50px;
+        bottom: 300px;
+        width: 2px;
+        background-color: red;
+      }
+      .blue-line{
+        position: absolute;
+        left: 40px;
+        top: 540px;
+        bottom: 0px;
+        width: 2px;
+        background-color: blue;
+      }
+      .vertical-line .cambridge {
+        position: absolute;
+        background-color: green;
+      }
+      ol {
+        margin: 0;
+        padding-left: 20px;
+      }
+      ol h3 {
+        margin-top: 0;
+      }
+      .timeline-item {
+        position: relative;
+        padding-left: 20px;
+      }
+
+      .timeline-item .blue-line {
+        position: absolute;
+        left: -20px;
+        top: 0;
+        width: 2px;
+        height: 5em; /* 字体高度 */
+        background-color: aquamarine;
+      }
+      .polyu-logo {
+        width: 20%
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="vertical-line"></div>
+      <div class="blue-line"></div>
+      <ol>
+        <h2>Education</h2>
+        <ol>
+          <h3>BSc (HONS) In Computer Science - The Hong Kong Polytechnic University</h3>
+          <img class=polyu-logo src="./PolyU_logo.png"></img>
+          <h3>PolyU 2022-2026</h3>
+          <h3>Year 1</h3>
+          <ol>
+            <div class="timeline-item">
+              <span class="blue-line"></span>
+              <h4>Computer Science</h4>
+              <h5>2024.05.2</h5>
+            </div>
+
+            <ol>
+              hi
+            </ol>
+          </ol>
+          <ol>
+            <div class="timeline-item">
+              <span class="green-line"></span>
+              <h4>Cambridge</h4>
+            </div>
+            <ol>
+              hi
+            </ol>
+          </ol>
+        </ol>
+        <ol>
+          <h3>Year 2</h3>
+          <ol>
+            Computer Science + Minor
+            <ol>
+              hi
+            </ol>
+          </ol>
+        </ol>
+        <ol>
+          <h3>TongJi University</h3>
+          <img class=polyu-logo src="./TongJi_logo.jpg"></img>
+          <h3>PolyU 2022-2026</h3>
+          <h3>Year 1</h3>
+          <ol>
+      </ol>
+    </div>
+  </body>
+</html>

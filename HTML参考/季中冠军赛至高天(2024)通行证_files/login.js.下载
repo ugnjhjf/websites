@@ -1,0 +1,182 @@
+//检查是否登录
+Milo.checkLogin({
+    iUseQQConnect: true, //如果当前活动使用的互联登录,请将改参数设置true
+    success: function (user) {
+        var userInfo = user && user.userInfo;
+        if (userInfo.acctype === 'wx') {
+            userInfo = undefined;
+            if (getQueryVariable('fromLiveFalg') == 1) {
+                Comm.showTips('本活动暂不支持微信登录，请您通过掌盟账号管理中切换为QQ账号登录后重新尝试参与活动。');
+            } else {
+                Comm.showTips('当前活动仅支持QQ登录，请在上方切换账号后重新尝试。');
+            }
+
+            $("#milo-logined").show();
+            $("#milo-unlogin").hide();
+            return false;
+        }
+        $("#milo-logined").show();
+        $("#milo-unlogin").hide();
+        $("#milo-userUin").text(userInfo.userUin)
+        queryBindArea();
+    },
+    fail: function (res) {
+        //todo login
+        // Milo.loginByQQ();
+    }
+});
+
+// qq登录
+$("#milo-qqlogin").click(function () {
+    login_act();
+});
+
+// 退出
+$("#milo-logout").click(function () {
+    Milo.logout({
+        // 退出回调
+        callback: function () {
+            window.location.reload();
+        }
+    });
+});
+
+// 查询绑定大区
+function queryBindArea() {
+    var flow_query = {
+        actId: '637440',
+        token: '6bd348',
+        loading: true, // 开启loading浮层,默认不开启
+        sData: {
+            query: true
+        },
+        success: function (res) {
+            if (res.iRet == 0 && res.data) {
+                $("#milo-binded").show();
+                $("#milo-unbind").hide();
+                $("#milo-areaName").text(decodeURI(res.data.areaName));
+                $("#milo-roleName").text(res.data.roleName);
+                Comm.init();
+            } else {
+                if (res.iRet == 302) {
+                    // 已结束
+                    return;
+                }
+                commitBindArea();
+            }
+        },
+        fail: function (res) {
+            if (res.iRet === -9998 || res.iRet === "-9998") {
+                return;
+            }
+            $("#milo-binded").hide();
+            $("#milo-unbind").show();
+            console.log('查询绑定大区fail', res);
+        }
+    }
+
+    Milo.emit(flow_query);
+}
+
+$("#milo-commitArea, #milo-changeArea").click(function () {
+    commitBindArea();
+});
+
+// 提交绑定大区
+function commitBindArea() {
+    var flow_commit = {
+        actId: '637440',
+        token: 'f62b4c',
+        loading: true, // 开启loading浮层,默认不开启
+        sData: {
+            query: false
+        },
+        success: function (res) {
+            if (res.data) {
+                $("#milo-binded").show();
+                $("#milo-unbind").hide();
+                $("#milo-areaName").text(decodeURI(res.data.areaName));
+                $("#milo-roleName").text(res.data.roleName);
+                Comm.init();
+            }
+        },
+        fail: function (res) {
+            if (res.iRet === -9998 || res.iRet === "-9998") {
+                return;
+            }
+            $("#milo-binded").hide();
+            $("#milo-unbind").show();
+            console.log('提交绑定大区fail', res);
+        }
+    }
+    Milo.emit(flow_commit)
+}
+function login_act() {
+    if (checkPlat_act() === 'ZM') {
+        Comm.showTips('请在上方切换账号后重新尝试');
+        return;
+    }
+    if (checkClient_act() === 'PC') {
+        Milo.loginByQQConnect({
+            appId: "101491592",
+            scope: "get_user_info",
+            state: "STATE",
+            redirectUri: "https://milo.qq.com/comm-htdocs/login/qc_redirect.html",
+            // callback: resolve,//登录成功后的回调
+        });
+    } else {
+        Milo.mobileLoginByQQConnect({
+            appId: '101491592',
+            scope: 'get_user_info',
+            redirectUri: 'https://milo.qq.com/comm-htdocs/login/qc_redirect.html',
+        });
+    }
+}
+
+function checkPlat_act(sAppTarget = 'lolapp') {
+    if (new RegExp('QQ/').test(navigator.userAgent)) {
+        return 'QQ';
+    }
+    if (navigator.userAgent.match('MicroMessenger')) {
+        return 'WX';
+    }
+    if (/weibo/i.test(navigator.userAgent)) {
+        return 'WEIBO';
+    }
+    if (typeof HostApp != 'undefined' || Milo.get('djc_appVersion') != null) {
+        return 'DJC';
+    }
+    if (Milo.get('lcu_client') != null) {
+        return 'LCU';
+    }
+    if (new RegExp(sAppTarget).test(navigator.userAgent)) {
+        return 'ZM';
+    }
+    return 'Browser';
+}
+
+function checkClient_act() {
+    let client = '';
+    if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+        // 判断iPhone|iPad|iPod|iOS
+        client = 'iOS';
+    } else if (/(Android)/i.test(navigator.userAgent)) {
+        // 判断Android
+        client = 'Android';
+    } else {
+        client = 'PC';
+    }
+    return client;
+}
+
+function getQueryVariable(variable) {
+    var query = window.location.search.substring(1);
+    var vars = query.split('&');
+    for (var i = 0; i < vars.length; i++) {
+      var pair = vars[i].split('=');
+      if (pair[0] == variable) {
+        return pair[1];
+      }
+    }
+    return false;
+}

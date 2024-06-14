@@ -1,0 +1,71 @@
+var Comm = {
+    iPrice: 8900,
+
+    init: function () {
+        Comm.queryTaskStatus();
+    },
+
+    /**
+     * 显示支付方式弹窗
+    */
+    showPayTypePopup: function () {
+        Milo.checkLogin({
+            iUseQQConnect: true, //如果当前活动使用的互联登录,请将改参数设置true
+            success: function (user) {
+                TGDialogS('pop_pay');
+            },
+            fail: function (res) {
+                //todo login
+                login_act();
+            }
+        });
+    },
+
+    /**
+     * 选择支付方式
+     * @param {string} sType 支付类型
+    */
+    chosePayType: function (sType) {
+        closeDialog();
+        switch (sType) {
+            case "cash":
+                // 现金支付
+                flow_1033371.sData.paytype = 2;
+                break;
+            case "ticket":
+                // 点券支付
+                flow_1033371.sData.paytype = 1;
+                break;
+            default:
+                Comm.showTips("抱歉，系统繁忙，请稍后再试。");
+                return;
+        }
+
+        Comm.buyMsiPackage();
+    },
+
+    queryTaskStatus: function () {
+        Milo.emit(flow_1033404);
+    },
+
+    buyMsiPackage: function () {
+        Milo.emit(flow_1033371);
+    },
+
+    setTakeBtnStatus: function (type) {
+        if (parseInt(type) == 0) {
+            // 未购买
+            $("#msiSellBtn").removeClass("gray").text("立即预购");
+            $("#msiSellBtn").attr("href", "javascript: Comm.showPayTypePopup();");
+        } else {
+            // 已购买
+            $("#msiSellBtn").addClass("gray").text("已购买");
+            $("#msiSellBtn").attr("href", "javascript: void(0);");
+        }
+    },
+
+    showTips: function (sMsg) {
+        $("#pop_sm1 .sm-txt").text(sMsg);
+        TGDialogS('pop_sm1');
+    }
+}

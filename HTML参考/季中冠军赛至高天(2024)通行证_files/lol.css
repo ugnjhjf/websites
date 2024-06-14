@@ -1,0 +1,21 @@
+.ost_bg { background: url(https://game.gtimg.cn/images/lol/title/top20230112.png) no-repeat;}
+.ost { width: 100%; height: 42px; background-repeat: repeat-x; color: #464646; left: 0; top: 0 !important; text-align: left; font-size: 12px; z-index: 8000; font-family: Tahoma; overflow: hidden;}
+.ost_b { width: 980px; padding: 0 5px; margin: 0 auto; position: relative; list-style: none;}
+.ost_tg { width: 205px; height: 42px; padding: 0 15px 0 0; margin: 0 15px 0 0; float: left; background-position: 0 -42px;}
+.ost_blnk { display: block; width: 100%; height: 100%; text-indent: -5000px; overflow: hidden;}
+.ost_gg { width: 230px; height: 42px; float: left; background-position: 0 -84px;}
+.ost_i { height: 42px; line-height: 42px; *line-height: 44px !important; line-height: 44px \9; _line-height: 42px; float: right;}
+.ost_gl { float: right;}
+.ost_lnk { color: #464646 !important; text-decoration: none;}
+.ost_ldc { border-right: 1px solid #BFC6D7; padding: 0 9px;}
+.ost_lnk:hover { color: #0096D0 !important;}
+.ost_t { float: right; width: 80px; padding: 0 0 0 28px; background-position: 10px -126px;}
+.ost_i p {margin: 0}
+.ost_age{background: url("https://game.gtimg.cn/images/lol/title/age.png");width: 33px;height: 42px;float: right;cursor: pointer; background-size: 100%; }
+.body:hover .bubble_box{display:block ;}
+.ost_blnk:hover .bubble_box{display:block ;}
+.bubble_box{display: none;width: 980px;padding: 0 5px;margin: auto;position: absolute;top: 42px;right: 0;left: 0;z-index: 8000}
+.bubble_border {padding: 20px;float: right;position: relative;width: 600px;height: auto;display: inline-block;top: 12px;;border-radius: 20px;background-color: rgba(0,0,0,0.8);}
+.bubble_border::before, .bubble_border::after {position: absolute;left: 300px;top: -19px;content: '';width: 0;height: 0;border-right: 10px solid transparent;border-top: 10px solid transparent;border-left: 10px solid transparent;border-bottom: 10px solid rgba(0,0,0,0.8);opacity: 0.7;}
+.bubble_border p{color: white;font-size: 14px;margin: 12px 0;word-spacing: 2px;}
+.bubble_border .agetips_paragraph{text-indent:20px;}

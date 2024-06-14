@@ -1,0 +1,85 @@
+// if ('https:' == document.location.protocol) {var str_url=document.location.href;var str_url_replace=str_url.replace(/https/i,"http");window.location.href = str_url_replace;}
+(function(o){if(window.attachEvent){window.attachEvent("onload",o);}else{window.addEventListener("load",o,false);};})(function(){
+	var d=document,
+	m=d.createElement("div"),
+	r=String(new Date()).split(":")[1],
+	l=function(u,y){
+		var s=d.createElement(y);
+		if(y=="script"){s.src=u;s.type="text/javascript";s.setAttribute("charset","gb2312");}
+		else{s.href=u;s.rel="stylesheet";s.type="text/css";};
+		d.getElementsByTagName("head")[0].appendChild(s);
+	};
+	//以下修改ost.css为各自产品的css地址
+	l("https://game.gtimg.cn/images/lol/title/lol.css?v="+r,"link");
+	m.className="ost ost_bg";
+	m.style.cssText="position:absolute;top:-500px;";
+	m.innerHTML=['<ul class="ost_b">',
+	//以下修改各自链接，及指定按钮统计代码（广告修改gg.js）
+		'<li class="ost_tg ost_bg"><a href="//game.qq.com/" target="_blank" class="ost_blnk" onclick="pgvSendClick({hottag:\'act.title.logo\'});">腾讯游戏</a></li>',
+		'<li class="ost_gg ost_bg"><a id="ost_gg" target="_blank" class="ost_blnk" onclick="pgvSendClick({hottag:\'act.title.shana\'});">精彩活动</a></li>',
+		'<li class="ost_i">',
+			'<p class="ost_t ost_bg"><a href="//lol.qq.com/" target="_blank" class="ost_lnk" onclick="pgvSendClick({hottag:\'act.title.back\'});">返回官网首页</a></p>',
+			'<p class="ost_gl">',
+				'<a href="//lol.qq.com/download.shtml" target="_blank" class="ost_lnk ost_ldc" onclick="pgvSendClick({hottag:\'act.title.down\'});">游戏下载</a>',
+        		'<a href="//lol.qq.com/act/a20180607wechatbinding/index.html" target="_blank" class="ost_lnk ost_ldc" onclick="pgvSendClick({hottag:\'act.title.wechat\'});">微信绑定</a>',
+        		'<a href="//lol.qq.com/comm-htdocs/pay/new_index.htm?t=lol" target="_blank" class="ost_lnk ost_ldc" onclick="pgvSendClick({hottag:\'act.title.pay\'});"> 点券充值</a>',
+			'</p>',
+		'</li>',
+	'</ul>'].join("");
+	d.body.appendChild(m);
+	d.body.style.paddingTop="42px";
+	l("//ossweb-img.qq.com/images/lol/title/gg.js?v="+r,"script");
+		var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+		var src = 'https://lol.qq.com/act/AutoCMS/publish/LOLK6CP/AgeAppropriateTip/age_appropriate_tip.js?v='+r;
+		var script = document.createElement('script');
+		script.setAttribute('type','text/javascript');
+		var agetip = [];
+		var ageElement = '';
+		script.onload = function() {
+			try{
+				for(var i = 0;i < AgeAppropriateTip.length;i++){
+					if(AgeAppropriateTip[i].hasOwnProperty('content') && AgeAppropriateTip[i].hasOwnProperty('id') && AgeAppropriateTip[i]['id'] == 0){
+						agetip = typeof AgeAppropriateTip[i]['content'] == "object" ? AgeAppropriateTip[i]['content'] : [AgeAppropriateTip[i]['content']];
+					}
+				}
+				for(i = 0;i < agetip.length;i++){
+					ageElement += '<p class="agetips_paragraph">'+agetip[i]+'</p>'
+				}
+
+				var e = d.createElement("div");
+				e.className="bubble_box";
+				e.innerHTML=['<div class="bubble_border"><p>提示说明：</p>'+ageElement+'</div>'];
+				// if( window.location.host == 'lol.qq.com' && typeof agetip == 'object' && agetip.length > 0){
+				if( typeof agetip == 'object' && agetip.length > 0 ){
+					var z = document.createElement('li'); // is a node
+					z.className = "ost_age ost_blnk";
+					z.innerHTML = '适龄提示';
+					z.onclick = function () {
+						pgvSendClick({hottag:'act.title.age'});
+					}
+					var ost_b = document.getElementsByClassName('ost_b')
+					var nost_b = ost_b.length - 1;
+					var ost_age = document.getElementsByClassName('ost_age ');
+					var nost_age = ost_age.length;
+					if(nost_b >= 0 && nost_age == 0) {
+						document.getElementsByClassName('ost_b')[nost_b].appendChild(z);
+
+						d.body.appendChild(e);
+						var ost_age = document.getElementsByClassName('ost_age ')[0];
+						ost_age.onmouseover = function () {
+							document.getElementsByClassName('bubble_box')[0].style.display = 'block';
+						};
+						ost_age.onmouseout = function () {
+							document.getElementsByClassName('bubble_box')[0].style.display = 'none';
+						};
+					}
+				}
+			}catch (e) {
+				console.log(e)
+			}
+		}
+		script.setAttribute('src', src);
+		HEAD.appendChild(script)
+});
+
+/*  |xGv00|f6427e6e3ceb52ce94b94e03ae290673 */

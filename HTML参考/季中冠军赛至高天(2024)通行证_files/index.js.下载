@@ -1,0 +1,159 @@
+
+function delayCookie(){
+    var cookieUin = Milo.get('uin', '');
+    if (cookieUin) {
+        Milo.set('uin_cookie', cookieUin, 365 * 24 * 60 * 60, 'qq.com', '/', false);
+        Milo.set('ied_qq', cookieUin, 365 * 24 * 60 * 60, 'qq.com', '/', false);
+    }
+  }
+
+
+
+//加载js
+function loadScripts(t,e){function a(){var o=document.createElement("script");o.type="text/javascript";var c=-1==t[n].indexOf("?")?t[n]+"?d="+Math.random():t[n]+"&d="+Math.random();o.src=c,document.body.appendChild(o),n++,o.readyState?o.onreadystatechange=function()
+{("loaded"==o.readyState||"complete"==o.readyState)&&(o.onreadystatechange=null,d++,d<t.length?a():e&&e())}:o.onload=function(){d++,d<t.length?a():e&&e()}}e=e||function(){};var n=0,d=0;a()}
+
+// 屏幕自适应
+if (!/(iPhone|iPad|iPod|iOS|Android|Windows Phone|BlackBerry|SymbianOS)/i.test(navigator.userAgent)) {
+
+
+
+    loadScripts([
+        
+        "//ossweb-img.qq.com/images/lol/title/lol.js",
+      ], function () {
+        //PC端脚本逻辑
+
+        
+    // 只需要在PC端工作
+    var adaptViewport = (function () {
+        function detectIE() {
+            var ua = window.navigator.userAgent;
+            var msie = ua.match(/MSIE (\d+)/g);
+            if (msie != null) {
+            return parseInt(msie[0].match(/\d+/g)[0]);
+            }
+            // IE 11
+            var trident = ua.indexOf('Trident/');
+            if (trident > 0) {
+                var rv = ua.indexOf('rv:');
+                return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+            }
+            return false;
+        }
+        var minWidth = 1400; // 最小宽度
+        var maxWidth = 3400; // 最大宽度
+        var designWidth = 1920; // 设计稿宽度
+        var isFirefox = navigator.userAgent.indexOf("Firefox") != -1
+        var ieVersion = detectIE();
+        var zoom = 1;
+        function resize(){
+            // doc.clientWidth不包含滚动栏宽度
+            var ww = document.documentElement.clientWidth || window.innerWidth;
+            var realWid = Math.min(Math.max(ww, minWidth), maxWidth);
+            zoom = realWid/designWidth;
+            if (ieVersion && ieVersion < 9) { return; }
+            // firefox不支持zoom. ie9,10,11 zoom表现奇怪
+            if (isFirefox || ieVersion >= 9) {
+            if (zoom !== 1) {
+                if (!$('.wrap').parent().hasClass('wrap-scale')) {
+                $('.wrap').wrap('<div class="wrap-scale"></div>')
+                $('.wrap').data('originHeight', $('.wrap').outerHeight())
+                }
+                var transformOrigin = '0% 0%';
+                // 页面最外层容器缩放
+                $('.wrap').css({'width': designWidth,'transform':'scale('+zoom+')', 'transform-origin': transformOrigin, 'margin-left': 0})
+                // 导航缩放
+                // if (zoom >= 1) {
+                //     $('.side_nav').css({ 'transform': 'scale(' + 1 / zoom + ')', 'transform-origin': '100% 50%' });
+                // } else {
+                //     $('.side_nav').css({ 'transform': 'scale(' + zoom + ')', 'transform-origin': '100% 50%' });
+
+                // }
+            }
+            } else {
+                // 页面最外层容器缩放
+                $('.wrap').css({'width': designWidth, 'zoom': zoom});
+                // 导航缩放
+                // if (zoom >= 1) {
+                //     $('.side_nav').css('zoom', 1 / zoom)
+                // } else {
+                //     $('.side_nav').css('zoom', zoom)
+
+                // }
+            }
+        }
+        resize();
+        window.onresize = resize;
+
+        return { zoom: zoom}
+    })();
+        
+      });
+
+
+
+
+
+
+
+
+
+
+
+}else{
+    loadScripts([
+        "//ossweb-img.qq.com/images/js/zepto/zepto.min.js",//移动端必引，同时分享依赖该文件
+        "//mlol-file.qpic.cn/mobile/mlol/js/mlol.js",
+      ], function () {
+          mlol.SetShare({
+            url: location.href,
+            title: "季中邀请赛 至高天（2024）通行证上线",
+            content: "赢取至臻 至高天 凯尔",
+            thumb_url: "https://game.gtimg.cn/images/lol/act/a20240430msipass/m/share.jpg",
+            callback: function (channel) {
+                console.log("点击了分享:", channel);
+            },
+        });
+        //移动端脚本逻辑
+      })
+      setTimeout(delayCookie, 2000);
+
+   
+
+}
+
+
+//弹框
+function TGDialogS(e) {
+    Milo.dialog.show({
+            id: e,
+            bgcolor: '#000', //背景色
+            opacity: 70 // 透明度
+    });
+}
+function closeDialog() {
+    Milo.dialog.hide();
+}
+
+// 视频弹窗
+var diaPlayer = null;
+function showVideoDia(vid) {
+    // 弹窗视频初始化
+    diaPlayer = new SuperPlayer({ container: '#tv1' });
+    diaPlayer.play({
+        vid
+      });
+    TGDialogS('video1');
+}
+// 关闭视频弹窗
+function closeVideoDia() {
+    $('#tv1').html('');
+    diaPlayer = null;
+    $('.dia-video').hide();
+    $('#_overlay_').hide();
+};
+
+function PTTSendClick(b,n,t){
+    LOLSendClickAT(b,n,t);
+}
