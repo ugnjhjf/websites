@@ -32,12 +32,22 @@
         position: absolute;
         left: 40px;
         top: 50px;
-        bottom: 30px;
+        bottom: 0px;
         width: 2px;
         background-color: red;
         z-index: 20;
     }
-
+  
+    .tongji-blue-line {
+        position: absolute;
+        left: 40px;
+        top: 0px;
+        bottom: 0;
+        width: 2px;
+        background-color: blue;
+        z-index: 20;
+    }
+  
 
 /* --------------- */
 /* Level 2 Line */
@@ -68,20 +78,43 @@
         top: 0;
         width: 2px;
         height: 3em;
+        background-color: grey;
+    }
+    .timeline-item .activity{
+        background-color: #da70d6;
     }
 
-    .timeline-item .cathay2022 {
-
-        /* 字体高度 */
-        background-color: #00645A;
-        height: 12em;
+    .timeline-item .assignment{
+        background-color: #ffff00;
     }
+
+    .timeline-itme .project{
+        background-color: #00ff7f;
+    }
+
+    .timeline-item .competition{
+        background-color: #00bfff;
+    }
+
+    
+/* Events */
+/* Year 1 */
+    .timeline-item .merit{
+        color: orange;
+    }
+    
     .timeline-item .hktechathon2023 {
-
         height: 3em;
         /* 字体高度 */
         background-color: rgba(152, 152, 152, 0.43);
     }
+    /* Year 2 */
+
+    .silver{
+        color:#FFD700;
+
+    }
+
 /* --------------- */
 /* Logos */
 /* --------------- */
@@ -91,4 +124,7 @@
     }
     .comp{
         width:15%
+    }
+    .design{
+        width:10%
     }

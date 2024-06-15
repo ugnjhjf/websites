@@ -9,7 +9,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  border-radius: 11px;
+  border-radius: 7px;
 }
 
 html {
@@ -129,8 +129,8 @@ header.sticky ul li a {
   color: black;
   padding: 3px;
   margin: none;
-  border-top-left-radius: 11px;
-  border-top-right-radius: 11px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
   border-bottom-left-radius:0px ;
   border-bottom-right-radius: 0px;
   border: none;
