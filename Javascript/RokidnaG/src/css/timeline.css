@@ -1,0 +1,94 @@
+    /* Global setting */
+    .container {
+        position: relative;
+        padding-left: 2%;
+        color: white;
+    }
+
+    ol {
+        margin: 2px;
+        margin-left: 20px;
+        border: 2px;
+        padding: 0px;
+    }
+
+    ol h3 {
+        margin-top: 0;
+    }
+
+    .item-bg {
+        background-color: grey;
+        background-position: -50px -50px;
+        border-radius: 12px;
+        width: 30%;
+        margin: 15px;
+    }
+/* --------------- */
+/* Level 1 Line */
+/* --------------- */
+
+/* PolyU redline 2022-2026 (Level 1) */
+    .polyu-red-line {
+        position: absolute;
+        left: 40px;
+        top: 50px;
+        bottom: 30px;
+        width: 2px;
+        background-color: red;
+        z-index: 20;
+    }
+
+
+/* --------------- */
+/* Level 2 Line */
+/* --------------- */
+    /* General activity timeline (Level 2) */
+    .organizer{
+        font-style: italic;
+        font-size:1em;
+    }
+    .event-title{
+        font-size:1.25em;
+
+    }
+
+    .award{
+        color: rgb(133, 0, 0)
+    }
+    .company_logo{
+        width: 50%;
+    }
+    .timeline-item {  
+        position: relative;
+        padding-left: 20px;
+    }
+    .timeline-item .line{
+        position: absolute;
+        left: -6%;
+        top: 0;
+        width: 2px;
+        height: 3em;
+    }
+
+    .timeline-item .cathay2022 {
+
+        /* 字体高度 */
+        background-color: #00645A;
+        height: 12em;
+    }
+    .timeline-item .hktechathon2023 {
+
+        height: 3em;
+        /* 字体高度 */
+        background-color: rgba(152, 152, 152, 0.43);
+    }
+/* --------------- */
+/* Logos */
+/* --------------- */
+    /* logo */
+    .polyu-logo {
+        width: 20%
+    }
+    .comp{
+        width:15%
+    }

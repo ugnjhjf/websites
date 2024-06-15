@@ -1,0 +1,55 @@
+    .container {
+       position: relative;
+       padding-left: 20px;
+   }
+
+   .polyu-red-line {
+       position: absolute;
+       left: 40px;
+       top: 50px;
+       bottom: 300px;
+       width: 2px;
+       background-color: red;
+   }
+
+   .blue-line {
+       position: absolute;
+       left: 40px;
+       top: 540px;
+       bottom: 0px;
+       width: 2px;
+       background-color: blue;
+   }
+
+   .polyu-red-line .cambridge {
+       position: absolute;
+       background-color: green;
+   }
+
+   ol {
+       margin: 0;
+       padding-left: 20px;
+   }
+
+   ol h3 {
+       margin-top: 0;
+   }
+
+   .timeline-item {
+       position: relative;
+       padding-left: 20px;
+   }
+
+   .timeline-item .blue-line {
+       position: absolute;
+       left: -20px;
+       top: 0;
+       width: 2px;
+       height: 5em;
+       /* 字体高度 */
+       background-color: aquamarine;
+   }
+
+   .polyu-logo {
+       width: 20%
+   }
