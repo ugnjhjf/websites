@@ -122,7 +122,9 @@ header.sticky .logo,
 header.sticky ul li a {
   color: #000;
 }
-
+.inf{
+  animation: 2s infinite;
+}
 /*Navigate Bar Section END*/
 /* Footer Section */
 .footer {
