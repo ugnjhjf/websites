@@ -111,7 +111,7 @@ header ul li a:hover {
   align-items: center; /* 这两行用于使用 Flexbox 进行居中 */
 }
 
-.banner.project {
+.banner.services {
   position: relative;
   width: 100%;
   height: 100vh;
