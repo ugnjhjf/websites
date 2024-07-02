@@ -1,4 +1,18 @@
 
+.project-art {
+    border-radius: 20%;
+    background-color: aqua;
+    text-align: center;
+    padding: 5px;
+    width: 15%;
+}
+.project-game {
+    border-radius: 10%;
+    background-color: darkorange;
+    text-align: center;
+    padding: 5px;
+    width: 50%;
+}
 .project-timeline{
     background-color: #ffffff;
 }
@@ -244,6 +258,9 @@
         padding: 15px 0 15px 0;
         position: relative;
     }
+
+
+
 
     .project-timeline .main_step_join .step_join_box {
         width: 100%;
