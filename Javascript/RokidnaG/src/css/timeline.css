@@ -73,7 +73,7 @@
   
     .tongji-blue-line {
         position: absolute;
-        left: 50px;
+        left: 40px;
         top: 20px;
         bottom: 0;
         width: 2px;
@@ -170,11 +170,14 @@
 /* --------------- */
     /* logo */
     .polyu-logo {
-        width: 30%
+        width: 30%;
+        padding: 5px;
+        margin: 15px;
     }
     .comp{
         width:23%
     }
     .design{
-        width:10%
+        width:30%
+        
     }
