@@ -1,3 +1,10 @@
 .project-art{
     background-color: red;
+    width: 50%;
+}
+
+.project-backend
+{
+    background-color: forestgreen;
+    width:55%
 }

@@ -1,16 +1,31 @@
-
-.project-art {
-    border-radius: 20%;
-    background-color: aqua;
+.project-tag
+{
+    border-radius: 15%;
     text-align: center;
     padding: 5px;
+
+}
+
+.project-software-type{
+    color: wheat;
+}
+
+.project-hardware-type {
+    color: cadetblue;
+}
+.project-art {
+    background-color: aqua;
+
     width: 15%;
 }
 .project-game {
-    border-radius: 10%;
-    background-color: darkorange;
-    text-align: center;
-    padding: 5px;
+ 
+    background-color:gold;
+    width: 50%;
+}
+
+.project-backend {
+    background-color: mediumvioletred;
     width: 50%;
 }
 .project-timeline{
