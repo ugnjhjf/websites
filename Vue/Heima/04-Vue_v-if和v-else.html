@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+    <div id="app">
+        <button @click="fn">切换性别</button>
+        <!-- v-on: 可以替换为 @ -->
+        <p v-if="gender === 1">Super Boy</p>
+        <p v-else>女</p>
+        <p v-if="player >= 90">优秀</p>
+        <p v-else-if="player >= 80">良好</p>
+        <p v-else-if="player >= 60">及格</p>
+    </div>
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                name: 'Rokidna G',
+                gender: 1,
+                player: 95
+            },
+            methods: {
+                fn(){
+                    if (this.gender === 1){
+                    console.log("Switch to girl");
+                    this.gender = 2;
+                    }
+                    else{
+                         console.log("Switch to boy");
+                         this.gender = 1
+                    }
+                }
+         
+            }
+        })
+    </script>
+
+</body>
+
+</html>
