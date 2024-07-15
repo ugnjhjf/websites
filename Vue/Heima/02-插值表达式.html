@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+
+
+<div id="app">
+<p>{{name.toUpperCase()}}</p> <!-- 将name的值转换为大写 -->
+<p>{{name}}</p>
+<p>{{ age>=18 ? "Super Boy" : "monika"}}</p>
+<!-- 不允许出现Javascript保留字，例如if for，会使整个页面崩溃 -->
+</div>
+
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+            name: 'Rokidna G',
+            age: 18
+        }
+    })
+</script>
+   
+</body>
+</html>
