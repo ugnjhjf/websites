@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 准备容器 -->
+    <div id="app">
+       账户:<input type="text" v-model="username"><br><br>
+       密码:<input type="password" v-model="password"><br><br>
+       邮箱:(注册需要)<input type="text" v-model="email"><br><br>
+
+       <button @click="register(username,password,email)">注册</button>
+       <button @click="login(username,password)">登陆</button>
+
+    </div>
+    <!-- 引包 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+    <script>
+        const app = new Vue({
+            // 通过el配置选择器，指定 Vue 管理的盒子
+            el: '#app',
+            data: {
+                userNo:0,
+                user:[
+                ]
+            },
+
+            methods: {
+                register(username,password,email){
+                    this.user.push({id:this.userNo,username,password,email
+                    });
+                    userNo++;
+                },
+                login(username,password){
+                    for(var i=0;i<this.user.length;i++){
+                        if(this.user[i].username==username&&this.user[i].password==password
+                    ){
+                        alert("登陆成功");
+                        alert("欢迎"+this.user[i].username);
+                        alert("你的邮箱是:"+this.user[i].email);
+                        return;
+                    }
+                }
+            }   
+            }
+        })
+    </script>
+</body>
+
+</html>

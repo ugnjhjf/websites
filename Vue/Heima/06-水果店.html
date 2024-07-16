@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Store</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+    <div id="app">
+        <ul>
+            <li v-for="(item, index) in fruit">{{item}} - {{index}}</li>
+            <br>
+            <li v-for="item in fruit">{{item}} </li>
+           
+        </ul>
+    
+    </div>
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                name: 'Rokidna G',
+                fruit:['苹果','香蕉','西瓜','葡萄'],
+         
+        }})
+    </script>
+
+</body>
+
+</html>
