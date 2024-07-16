@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开发0.00109坤年的小黑记事本</title>
+</head>
+
+<body>
+
+    <!-- 准备容器 -->
+    <div id="app">
+       
+        <h1>小黑记事本</h1>
+        输入想要搜索的内容<input type="text" v-model="searchContent"><button @click="search()">搜索</button><br><br>
+        输入想要添加的任务<input type="text" v-model="newTask"><button @click="addItem(newTask)">添加</button><br><br>
+        <ul><li v-for="(item,index) in items" :key="items.id">{{(index+1) +".   "+item.content}}<button @click="clearOneItem(item.id)">删除</button></li></ul>
+        <div v-if="items.length>0"><button  @click="clearALLItem()">清空</button>
+        项目总数:<strong>{{items.length}}</strong></div>
+       
+      
+
+    </div>
+    <!-- 引包 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+    <script>
+        const app = new Vue({
+            // 通过el配置选择器，指定 Vue 管理的盒子
+            el: '#app',
+            data: {
+                searchContent:'',
+                items: [
+                ]
+            },
+
+            methods: {
+                addItem(newTask){
+                    if(this.newTask.trim() === ''){ window.alert("请输入内容"); return ;}
+                    this.items.push({id: this.items.length+1,content: newTask});this.itemNo++;},
+                search(){},
+                clearOneItem(id){this.items = this.items.filter(item => item.id != id);},
+                clearALLItem(){this.items=[];
+                },
+         
+            }
+        })
+    </script>
+</body>
+
+</html>
