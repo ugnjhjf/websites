@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航高亮</title>
+</head>
+
+<body>
+    <style>
+        .active { background-color: red; border: solid;}
+    </style>
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+
+    <div id="app">
+        <ul>
+            <li v-for="(item,index) in list" :key="item.id" @click="activeIndex = index" >
+                <a href="#" :class="{active: index === activeIndex}">{{item.name}}</a>
+            </li>
+            <!-- :class 少个冒号都不行：代表v-bind -->
+        </ul>
+    </div>
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+            activeIndex: 2, //
+                list:[
+                {id: 1, name: '秒杀'},
+                {id: 2, name: '特价'},
+                {id: 3, name: '热卖'},
+                
+
+            ]
+            }})
+    </script>
+
+</body>
+
+</html>
