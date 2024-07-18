@@ -23,13 +23,35 @@ body {
 header .author {
   font-size: 0.35em;
   padding: 0px;
-  top: 50%;
+  top: 0%;
   color:violet
+}
+
+.broadcast{
+  font-size:1em;
+   background-color: #ffa500;
+    background: rgb(255, 165, 0, .65
+    );
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  transition: 0.6s;
+  z-index: 100000;
+  border-radius: 0px;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 header {
   position: fixed;
-  top: 0;
+  top: 30px;
   left: 0;
   width: 100%;
   height: 50px;
@@ -38,6 +60,9 @@ header {
   transition: 0.6s;
   padding: 10px 100px;
   z-index: 100000;
+  border-radius:0px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 header.sticky {
   padding: 10px 100px;
@@ -145,8 +170,8 @@ header.sticky ul li a {
   color: black;
   padding: 3px;
   margin: none;
-  border-top-left-radius: 7px;
-  border-top-right-radius: 7px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
   border-bottom-left-radius:0px ;
   border-bottom-right-radius: 0px;
   border: none;
@@ -160,12 +185,7 @@ header.sticky ul li a {
   align-items: center;
 }
 
-.footer-rokidna{
-  border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 11px;
-    border-bottom-right-radius: 11px;
-}
+
 .footer li {
   font-size: 70%;
   display: inline-block;
@@ -249,7 +269,16 @@ header.sticky ul li a {
   }
 }
 /* Scroll bar Section END */
-
+.downloadCV {
+position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: #0077b5;
+  width: 25%;
+  
+}
 /* Social platform Section*/
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 
@@ -362,3 +391,4 @@ header.sticky ul li a {
 }
 
 /* Social platform Section END */
+
