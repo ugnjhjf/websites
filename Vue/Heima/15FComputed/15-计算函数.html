@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航高亮</title>
+</head>
+
+<body>
+    <style>
+        .inner {
+            width: 10%;
+            background-color: blueviolet;
+
+        }
+
+        .progress {
+            width: 100%;
+            border: solid;
+        }
+    </style>
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+
+    <div id="app">
+        <ul>
+            <li v-for="(item, index) in inventory" :key="item">{{item.name}} ${{item.price}}</li>
+        </ul>
+               <!-- <p>Total inventory = {{totalInventory()}}</p>  -->
+               <p>Total inventory = {{totalInventory}}</p> 
+                <!-- Computed是属性而不是一个函数 -->
+    </div>
+    </div>
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+               inventory:
+               [
+                {id:1,storageNo:30,price:15,name:"Cookie"},  
+                {id:2,storageNo:3,price:5,name:"Cola"},
+                {id:3,storageNo:0,price:7,name:"Banana"},
+                {id:4,storageNo:5,price:13,name:"Ice"}
+               ]
+            },
+            // computed:{
+            //     totalInventory(){
+            //         return 6
+            //     }
+            // }
+
+            //Computed对比Method：如果computed 属性被多次调用，只会算第一次，之后都是读算出来的缓存
+            //Method则调一次算一次
+            computed:{
+                totalInventory(){
+                    let total= this.inventory.reduce((sum, item) => sum + item.storageNo, 0)
+                    return total
+                }
+                
+            }
+        })
+    </script>
+
+</body>
+
+</html>
