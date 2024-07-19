@@ -26,6 +26,7 @@ header .author {
   top: 0%;
   color:violet
 }
+
 .box_centre{
   margin: auto;
   width: 50%;
@@ -182,6 +183,7 @@ header.sticky ul li a {
   color: black;
   padding: 3px;
   margin: none;
+  width: 100%;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   border-bottom-left-radius:0px ;
@@ -282,14 +284,23 @@ header.sticky ul li a {
 }
 /* Scroll bar Section END */
 .downloadCV {
-  border-style: solid;
-  padding: 35px;
-  margin: auto;
+  border-radius: 0px;
+  padding: 0px;
+  background-color: white;
 }
 
-.downloadCV_border{
+.downloadCV_btn{
   border: 1px;
   border-style: solid;
+  width: 45%;
+  height: 25%;
+  padding: 0px;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+
+
+  
 }
 /* position: relative;
   display: flex;
