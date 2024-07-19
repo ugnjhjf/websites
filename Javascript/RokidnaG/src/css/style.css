@@ -238,21 +238,21 @@ header.sticky ul li a {
 .scroll-down-right {
   left: 80%;
 }
-
+/* To Top Btn */
 #back-to-top {
   display: none;
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 99;
-  font-size: 18px;
+  font-size: 25px;
   color: #fff;
   background-color: #0077b5;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   text-align: center;
-  line-height: 40px;
+  line-height: 50px;
   opacity: 0;
   /* 初始透明度 */
   cursor: pointer;
