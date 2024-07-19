@@ -42,13 +42,16 @@
     <a href="#" class="logo"><p>GNetwork<span class="author">by RokidnaG</span></p></a>
     <ul>
       <li><a href="#education"><span class="home">About</span></a> </li>
-      <!-- About
-        <li><a href="#education">About</a></li> -->
+      <!-- Blog -->
+      <li>
+        <a href="#" onclick="alert('Coming Soon!')"><span class="blog">Blog</span></a>
+      </li>
       <!-- CV -->
       <li>
         <a href="https://cloud.gnetwork.space/" onclick="alert('Click continue as Guest')"><span
             class="CV">CV</span></a>
       </li>
+      
       <!-- Services -->
       <li><a href="#services">Services</a></li>
       <!-- Projects -->
@@ -60,6 +63,13 @@
     </ul>
   </header>
   <!-- *Top navigate bar END-->
+
+
+   <!-- To top btn -->
+  <a href="#" id="back-to-top" title="Back to Top"><i class="fa fa-angle-up fa-1x"></i></a>
+  <!--  *To top btn END* -->
+
+  <!-- First Page -->
   <section class="banner"></section>
   <div class="card">
     <div class="imgBx">
@@ -86,16 +96,18 @@
       </div>
     </div>
   </div>
-
+  <!-- *First Page END* -->
   <!-- Scroll down button 1 -->
   <!-- Education Page -->
   <div>
- 
+
     <section id="education" class="banner education">
       <section id="scroll-down2">
-        <h1>Education</h1>
+        <h1 class="education_box education_box_title step_join_box step_join_content mt_80" data-aos-duration="1000" data-aos="fade-up"
+      data-aos-anchor-placement="top-center "> Education</h1>
         <div class="">
-          <div class="education_box">
+          <div class="education_box step_join_box step_join_content mt_80" data-aos-duration="1000" data-aos="fade-up"
+      data-aos-anchor-placement="top-center ">
             <!-- Education -->
             <ol>
               <div>
@@ -127,7 +139,7 @@
             </ol>
 
           </div>
-          <a href="#project">
+          <a href="#activity">
             <div class="scroll-down scroll-down-right"></div>
           </a>
         </div>
@@ -139,9 +151,12 @@
 
   <br>
   <!-- Activities Highlight content  -->
-  <div class="container1 ">
+   <section id="activity">
+  <h1 class="education_box activities_box_title step_join_box step_join_content mt_80" data-aos-duration="1000" data-aos="fade-up"
+      data-aos-anchor-placement="top-center ">Activities Highlight</h1>
+  <div class="container1 step_join_box step_join_content mt_80" data-aos-duration="1000" data-aos="fade-up"
+      data-aos-anchor-placement="top-center ">
     <div class="polyu-red-line"></div>
-    <h1>Activities Highlight</h1>
     <ol>
       <ol>
         <!-- First Title -->
@@ -244,7 +259,8 @@
 
       </ol>
   </div>
-  <div class="container1">
+    <div class="container1 step_join_box step_join_content mt_80" data-aos-duration="1000" data-aos="fade-up"
+      data-aos-anchor-placement="top-center ">
     <div class="tongji-blue-line"></div>
     <ol>
       <ol>
@@ -275,19 +291,27 @@
               <a href="https://github.com/ugnjhjf/ugnjhjf.github.io">link</a>
             </div>
           </ol>
+    <a href="#services">
+      <div class="scroll-down scroll-down-right"></div>
+    </a>
   </div>
 
 
+
   <button>ALL Activities</button>
+   </section>
 
   <section id="services" class="banner services">
     <section id="scroll-down2">
-      <div class="step_join_box project_box step_join_content mt_80" data-aos-duration="1000" data-aos="fade-up"
+      <div class="service_box service_box_title" data-aos-duration="1000" data-aos="fade-up"
+        data-aos-anchor-placement="top-center ">Services</div>
+      <br>
+      <div class="step_join_box service_box step_join_content mt_80" data-aos-duration="1000" data-aos="fade-up"
         data-aos-anchor-placement="top-center ">
 
         <!-- Education -->
         <ol>
-          <h1>Services</h1>
+  
           <!-- 2nd  -->
 
           <ol>
@@ -325,8 +349,8 @@
           </ol>
         </ol>
       </div>
-      <a href="">
-        <div class="scroll-down scroll--right"></div>
+      <a href="#project">
+        <div class="scroll-down scroll-down-right"></div>
       </a>
     </section>
   </section>
@@ -474,6 +498,31 @@
     <script type="text/javascript">
       AOS.init();
     </script>
+    <!-- To Top btn listen script -->
+    <script>        
+ window.addEventListener('scroll', function () {
+    var backToTopButton = document.getElementById('back-to-top');
+    if (window.pageYOffset > 100) {
+      backToTopButton.style.display = 'block';
+      setTimeout(function () {
+        backToTopButton.style.opacity = '0.85';
+      }, 10); // 确保display属性已经生效后再更改透明度
+    } else {
+      backToTopButton.style.opacity = '0';
+      setTimeout(function () {
+        if (window.pageYOffset <= 100) { // 检查页面位置以防止闪烁
+          backToTopButton.style.display = 'none';
+        }
+      }, 500); // 延迟与transition时间一致
+    }
+  });
+
+  document.getElementById('back-to-top').addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+          <!-- *To Top btn listen script END*-->
 
   </div>
 </div>
@@ -481,8 +530,9 @@
 <div class="downloadCV">
   <div class="box_centre downloadCV_btn">
     <nav class="menu menu--adsila">
+      <br>
       <a class="menu__item" href="https://anime.gnetwork.space">
-        <span class=" box_centre menu__item-name ">Download David SHUM's CV</span>
+        <span class=" box_centre menu__item-name ">Download David SHUM's Resume</span>
       </a>
       </nav>
   </div>

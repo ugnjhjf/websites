@@ -11,6 +11,7 @@
             backdrop-filter: blur(10px);
     }
 
+    /* 高斯模糊盒 */
     .education_box{
         position: relative;
         left:5%;
@@ -22,10 +23,21 @@
         background: rgba(255, 255, 255, .7);
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(5px);
+    }
 
-        }
+    .education_box.education_box_title{
+        color: red;
+        width: 20%;
+        font-size: 3em;
+    }
+    .education_box.activities_box_title{
+        color: red;
+        width: 35%;
+        font-size: 3em;
+    }
 
-     .project_box{
+
+     .service_box{
         position: relative;
         left: 5%;
         padding-left: 2%;
@@ -36,6 +48,12 @@
         background: rgba(144, 161, 188, 0.8);
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(5px);
+        }
+
+        .service_box.service_box_title{
+            color: red;
+            width: 45%;
+            font-size: 3em;
         }
         
     ol {

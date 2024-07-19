@@ -91,6 +91,10 @@ header .home {
   color: rebeccapurple;
 }
 
+header .blog{
+  color: #25d366
+}
+
 header .contact {
   color: gold;
   font-family: "Homemade Apple", cursive;
@@ -144,6 +148,7 @@ header ul li a:hover {
   justify-content: center;
   align-items: center; /* 这两行用于使用 Flexbox 进行居中 */
 }
+
 
 header.sticky .logo,
 header.sticky ul li a {
@@ -234,6 +239,31 @@ header.sticky ul li a {
   left: 80%;
 }
 
+#back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 18px;
+  color: #fff;
+  background-color: #0077b5;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  opacity: 0;
+  /* 初始透明度 */
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+  /* 添加淡入淡出动画 */
+}
+
+ #back-to-top:hover {
+   opacity: 1;
+ }
+
 /*.scroll-down span {
   order: 2; /* 确保文字显示在箭头下方 */
 /* padding-top: 50px; /* 在文字与箭头之间添加一些空间 */
@@ -292,15 +322,14 @@ header.sticky ul li a {
 .downloadCV_btn{
   border: 1px;
   border-style: solid;
+  border-radius: 50px;
   width: 45%;
-  height: 25%;
+  height: 15%;
   padding: 0px;
   margin: auto;
   text-align: center;
   align-items: center;
 
-
-  
 }
 /* position: relative;
   display: flex;
