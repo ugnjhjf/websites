@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航高亮</title>
+</head>
+
+<body>
+    <style>
+        .inner{
+            width: 10%;
+            background-color: blueviolet;   
+    
+        }
+        .progress{
+            width: 100%;
+            border: solid;
+        }
+        
+    </style>
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+
+    <div id="app">
+        
+    <div class="progress">
+        <div class="inner" :style="{ width: percent + '%'}">
+                <span>{{percent}}%</span>
+        </div>
+        </div>
+        <button @click="percent = 25">25%</button>
+        <button @click="percent = 50">50%</button>
+        <button @click="percent = 75">75%</button>
+        <button @click="percent = 100">100%</button>
+      
+        <!-- :class 少个冒号都不行：代表v-bind -->
+ 
+    </div>
+</div>
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                percent: 0, //
+            }
+        })
+    </script>
+
+</body>
+
+</html>

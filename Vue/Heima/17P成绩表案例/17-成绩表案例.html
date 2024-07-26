@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航高亮</title>
+</head>
+
+<body>
+  <style>
+    .fail{
+        color:red;
+    }
+    table,th,td{
+        border: 1px solid;
+        
+    }
+  </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+
+    <div id="app">
+    <table>
+       <thead>
+       </thead>
+      <tbody v-if="result.length > 0">
+        <tr>
+            <th>编号</th>
+            <th>科目</th>
+            <th>成绩</th>
+            <th>操作</th>
+        </tr>
+        <tr v-for="(item,index) in result" :key="item.id">
+            <td>{{index+1}}</td>
+            <td>{{item.subjectName}}</td>
+            <td :class="{fail: item.mark <= 60}">{{item.mark}}</td>
+            <td><button @click="deleteItem(index)">删除</button></td>
+            <!-- 上面这一行有问题 -->
+        </tr>
+      </tbody >
+
+      <tbody v-else>
+        <tr>暂无数据</tr>
+      </tbody>
+      <tfoot>
+
+
+      </tfoot>
+    </table>    
+    {{totalMark}}
+    </div>
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+            result:[
+                {id:1,subjectName: "Math",mark:95 },
+                {id:2,subjectName: "ICT",mark:99 },
+                {id:3,subjectName: "Bio",mark: 85},
+                {id:4,subjectName: "Game Dev",mark:15 }
+            ]    
+            },
+            methods:{
+                deleteItem(id) { this.result = this.result.filter(item => item.id != id); },
+            },
+            computed:{
+                totalMark(){
+                    return this.result.reduce((sum, item) => sum + item.mark, 0
+                        
+                    )
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>

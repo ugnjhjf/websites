@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航高亮</title>
+</head>
+
+<body>
+    <style>
+        .inner {
+            width: 10%;
+            background-color: blueviolet;
+
+        }
+
+        .progress {
+            width: 100%;
+            border: solid;
+        }
+    </style>
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+
+    <div id="app">
+        <h3>59同城</h3>
+       姓名 <input type="text" placeholder="请输入姓名" v-model="username"><br><br>
+       是否单身 <input type="checkbox" v-model="isSingle"><br><br>
+       性别  
+        <input v-model="gender" type="radio" name="sex" value="1">男
+        <input v-model="gender" type="radio" name="sex" value="2">女<br><br>
+
+        所在城市
+        <select v-model="city">
+            <option value="HK">香港</option>
+            <option value="SZ">深圳</option>
+            <option value="SH">上海</option>
+            <option value="HZ">杭州</option>
+
+        </select>
+    </div>
+    </div>
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                username: '',
+                isSingle: true,
+                gender: "1",
+                city: "HZ"
+                
+            }
+        })
+    </script>
+
+</body>
+
+</html>
