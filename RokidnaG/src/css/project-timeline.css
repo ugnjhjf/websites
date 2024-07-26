@@ -139,7 +139,7 @@
 }
 
 .project-timeline .step_img {
-    width: 450px;
+    width: 95%;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -160,6 +160,7 @@
     -ms-transform: translate(-50%, -56%) !important;
     transform: translate(-50%, -56%) !important;
 }
+
 
 .project-timeline .step_join_icon.step_join_icon_two,
 .project-timeline .step_join_icon_three,
@@ -195,9 +196,10 @@
         margin-right: 30px;
     }
 
-    .project-timeline .step_img {
-        width: 360px;
-    }
+.project-timeline .step_img {
+    width: 360px;
+}
+
 
     .project-timeline .step_join_icon_one {
         -webkit-transform: translate(-50%, -62%) !important;

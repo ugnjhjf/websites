@@ -316,8 +316,9 @@ header.sticky ul li a {
 /* Scroll bar Section END */
 .downloadCV {
   border-radius: 0px;
-  padding: 0px;
+  padding: 80px;
   background-color: white;
+
 }
 
 .downloadCV_btn{
@@ -327,6 +328,7 @@ header.sticky ul li a {
   width: 45%;
   height: 15%;
   padding: 0px;
+  
   margin: auto;
   text-align: center;
   align-items: center;
