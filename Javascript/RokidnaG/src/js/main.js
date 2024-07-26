@@ -31,3 +31,5 @@ function sendEmail() {
 function goBackHome() {
   window.location.href = "index.html";
 }
+
+
