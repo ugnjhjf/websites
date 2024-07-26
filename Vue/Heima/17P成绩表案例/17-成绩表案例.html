@@ -12,20 +12,24 @@
     .fail{
         color:red;
     }
+    table,th,td{
+        border: 1px solid;
+        
+    }
   </style>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
 
     <div id="app">
     <table>
        <thead>
+       </thead>
+      <tbody v-if="result.length > 0">
         <tr>
             <th>编号</th>
             <th>科目</th>
             <th>成绩</th>
             <th>操作</th>
         </tr>
-       </thead>
-      <tbody>
         <tr v-for="(item,index) in result" :key="item.id">
             <td>{{index+1}}</td>
             <td>{{item.subjectName}}</td>
@@ -33,7 +37,15 @@
             <td><button @click="deleteItem(index)">删除</button></td>
             <!-- 上面这一行有问题 -->
         </tr>
+      </tbody >
+
+      <tbody v-else>
+        <tr>暂无数据</tr>
       </tbody>
+      <tfoot>
+
+
+      </tfoot>
     </table>    
     {{totalMark}}
     </div>
