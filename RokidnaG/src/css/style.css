@@ -156,7 +156,7 @@ header.sticky ul li a {
 }
 .inf{
   animation: 5s infinite;
-  animation-delay: 3s;
+  animation-delay: 1s;
 }
 
 .broadcast {
@@ -181,7 +181,12 @@ header.sticky ul li a {
 }
 /*Navigate Bar Section END*/
 
+.activitybg{
+  background-image: url("../assets/images/background/bg1.png");
+    background-repeat:no-repeat;
+    background-size:100%;
 
+}
 
 
 /* Footer Section */
