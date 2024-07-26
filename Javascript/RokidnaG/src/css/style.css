@@ -156,6 +156,7 @@ header.sticky ul li a {
 }
 .inf{
   animation: 5s infinite;
+  animation-delay: 3s;
 }
 
 .broadcast {
