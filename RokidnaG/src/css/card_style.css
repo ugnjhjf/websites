@@ -9,7 +9,7 @@
     -35%
   ) !important; /* 向左和向上偏移自身的50%，实现完全居中 */
   width: 350px;
-  height: 250px; /* 可以调整为 450px 视觉效果更佳 */
+  height: 230px; /* 可以调整为 450px 视觉效果更佳 */
   background: linear-gradient(45deg, #b4b4b8, #c7c8cc, #e3e1d9, #f2efe5);
   border-radius: 20px;
   box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
@@ -59,11 +59,11 @@
 }
 
 .card .content .details {
-  padding: 40px;
+  padding: 50px;
   text-align: center;
   width: 100%;
   transition: 0.5s;
-  transform: translateY(150px);
+  transform: translateY(100px);
 }
 
 .card:hover .content .details {
