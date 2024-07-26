@@ -130,8 +130,15 @@
         height: 3em;
         background-color: grey;
     }
+
     .timeline-item .activity{
         background-color: #f79586;
+        width:2px;
+    }
+    .timeline-item .emsd{
+        background-color: #f79586;
+
+        height: 20em;
     }
 
     .timeline-item .assignment{
