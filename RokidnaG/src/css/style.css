@@ -182,9 +182,12 @@ header.sticky ul li a {
 /*Navigate Bar Section END*/
 
 .activitybg{
-  background-image: url("../assets/images/background/bg1.png");
-    background-repeat:no-repeat;
-    background-size:100%;
+  background-image: url("../assets/images/background/bg2.png"),url("../assets/images/background/bg5.png"),url("../assets/images/background/bg1.png");
+    background-repeat:no-repeat,
+      no-repeat,no-repeat;
+    background-size:100% 50%,100% 50%,100%;
+    background-position: top, center, bottom;
+    margin: auto;
 
 }
 
