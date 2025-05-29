@@ -1,0 +1,471 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap");
+
+/*Navigate Bar Section*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  border-radius: 7px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #000;
+  min-height: 200vh;
+}
+
+header .author {
+  font-size: 0.35em;
+  padding: 0px;
+  top: 0%;
+  color:violet
+}
+
+.box_centre{
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  align-items: center;
+  padding: 35px;
+
+}
+
+
+header {
+  position: fixed;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  transition: 0.6s;
+  padding: 10px 100px;
+  z-index: 100000;
+  border-radius:0px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+header.sticky {
+  padding: 10px 100px;
+  background-color: white;
+    background: rgb(255, 255, 255, .65
+    );
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
+}
+
+header .logo {
+  position: relative;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2em;
+  /* text-transform: uppercase; */
+  letter-spacing: 2px;
+  transition: 0.6s;
+}
+
+header ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul li {
+  position: relative;
+  list-style: none;
+}
+/*Navigate Bar itemsSection*/
+header .CV {
+  color: orange;
+}
+header .home {
+  color: rebeccapurple;
+}
+
+header .blog{
+  color: #25d366
+}
+
+header .contact {
+  color: gold;
+  font-family: "Homemade Apple", cursive;
+  font-weight: 600;
+  font-size: 1em;
+  font-style: normal;
+}
+/*Navigate Bar itemsSection END*/
+header ul li a {
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 500px;
+  transition: 0.6s;
+}
+
+header ul li a:hover {
+  color: #000;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../assets/images/bg.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* 这两行用于使用 Flexbox 进行居中 */
+}
+
+.banner.services {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../assets/images/bg_project.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* 这两行用于使用 Flexbox 进行居中 */
+}
+.banner.education {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../assets/images/bg_education.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* 这两行用于使用 Flexbox 进行居中 */
+}
+
+
+header.sticky .logo,
+header.sticky ul li a {
+  color: #000;
+}
+.inf{
+  animation: 5s infinite;
+  animation-delay: 1s;
+}
+
+.broadcast {
+  font-size: 1em;
+  background-color: #ffa500;
+  background: rgb(255, 165, 0, .65);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  transition: 0.6s;
+  z-index: 100000;
+  border-radius: 0px;
+  justify-content: center;
+  align-items: center;
+
+}
+/*Navigate Bar Section END*/
+
+.activitybg{
+  background-image: url("../assets/images/background/bg2.png"),url("../assets/images/background/bg5.png"),url("../assets/images/background/bg1.png");
+    background-repeat:no-repeat,
+      no-repeat,no-repeat;
+    background-size:100% 50%,100% 50%,100%;
+    background-position: top, center, bottom;
+    margin: auto;
+
+}
+
+
+/* Footer Section */
+.footer {
+  color: black;
+  padding: 3px;
+  margin: none;
+  width: 100%;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius:0px ;
+  border-bottom-right-radius: 0px;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  font-weight: 500;
+  background: white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.footer li {
+  font-size: 70%;
+  display: inline-block;
+  padding: 10px;
+}
+
+.footer .heart {
+  color: red;
+}
+/* Footer Section END*/
+/* Scroll bar Section */
+
+.scroll-down {
+  height: 80px; /* 增加高度以容纳文字 */
+  width: 130px; /* 增加宽度以更好地居中显示文字 */
+  /* border: 2px solid white; */
+  border: 0px transparent;
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  border-radius: none;
+  cursor: pointer;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column; /* 使内容垂直堆叠 */
+  align-items: center; /* 水平居中对齐子项 */
+  justify-content: center; /* 垂直居中对齐子项 */
+  padding: 10px 0; /* 添加内边距以避免内容触摸边界 */
+}
+
+.scroll-down-right {
+  left: 80%;
+}
+/* To Top Btn */
+#back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 25px;
+  color: #fff;
+  background-color: #0077b5;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  opacity: 0;
+  /* 初始透明度 */
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+  /* 添加淡入淡出动画 */
+}
+
+ #back-to-top:hover {
+   opacity: 1;
+ }
+
+/*.scroll-down span {
+  order: 2; /* 确保文字显示在箭头下方 */
+/* padding-top: 50px; /* 在文字与箭头之间添加一些空间 */
+/* font-size: 14px; /* 设置文字大小 */
+/* color: white; /* 设置文字颜色 */
+/* text-align: center; /* 确保文字水平居中 */
+/* animation: scroll-down 1.5s ease-in-out infinite;
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  font-style: normal;
+} */
+
+.scroll-down::before,
+.scroll-down::after {
+  content: "";
+  position: absolute;
+  top: 10%; /* 调整位置以适合新布局 */
+  left: 50%;
+  height: 10px;
+  width: 10px;
+  transform: translate(-50%, -100%) rotate(45deg);
+  border: 2px solid white;
+  border-top: transparent;
+  border-left: transparent;
+  animation: scroll-down 1.5s ease-in-out infinite;
+}
+
+.scroll-down::before {
+  top: 20%; /* 调整位置以适合新布局 */
+  animation-delay: 0.3s;
+}
+
+@keyframes scroll-down {
+  0% {
+    /* top:20%; */
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    top: 90%;
+    opacity: 0;
+  }
+}
+/* Scroll bar Section END */
+.downloadCV {
+  border-radius: 0px;
+  padding: 80px;
+  background-color: white;
+
+}
+
+.downloadCV_btn{
+  border: 1px;
+  border-style: solid;
+  border-radius: 50px;
+  width: 45%;
+  height: 15%;
+  padding: 0px;
+  
+  margin: auto;
+  text-align: center;
+  align-items: center;
+
+}
+/* position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: gray;
+  width: 25%;
+  height: 15%;
+  border: solid;
+  border-width: 5px;
+  border-color: red;
+  left: 38%;
+  bottom: 5px;
+} */
+/* Social platform Section*/
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+.wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper .icon {
+  margin: 0 20px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon span {
+  display: block;
+  height: 60px;
+  width: 60px;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon span i {
+  line-height: 60px;
+  font-size: 25px;
+}
+.wrapper .icon .tooltip {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  background: #fff;
+  color: #fff;
+  padding: 10px 18px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 25px;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon:hover .tooltip {
+  top: -70px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.icon .tooltip:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: #fff;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%) rotate(45deg);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon:hover span {
+  color: #fff;
+}
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+}
+.wrapper .facebook:hover span,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip:before {
+  background: #3b5999;
+}
+.wrapper .twitter:hover span,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip:before {
+  background: #46c1f6;
+}
+.wrapper .instagram:hover span,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip:before {
+  background: #e1306c;
+}
+.wrapper .github:hover span,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip:before {
+  background: #333;
+}
+.wrapper .linkedin:hover span,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip:before {
+  background: #0077b5;
+}
+
+.wrapper .whatsapp:hover span,
+.wrapper .whatsapp:hover .tooltip,
+.wrapper .whatsapp:hover .tooltip:before {
+  background: #25d366;
+}
+
+.wrapper .weixin:hover span,
+.wrapper .weixin:hover .tooltip,
+.wrapper .weixin:hover .tooltip:before {
+  background: #09b83e;
+}
+
+/* Social platform Section END */
+

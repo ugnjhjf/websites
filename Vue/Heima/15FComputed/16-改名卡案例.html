@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航高亮</title>
+</head>
+
+<body>
+    <style>
+        .inner {
+            width: 10%;
+            background-color: blueviolet;
+
+        }
+
+        .progress {
+            width: 100%;
+            border: solid;
+        }
+    </style>
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+
+    <div id="app">
+        姓<input type="text" name="" v-model="Surname" id=""> +
+        名<input type="text" name="" v-model="Familyname" id=""> =
+        <span>{{ fullName }}</span>
+        <button @click="changeName()">改名卡</button>
+    </div>
+    </div>
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                Surname:'刘',
+                Familyname:'备',
+            },
+            methods:{
+                changeName()
+                {
+                    this.fullName = "BoyBoy"
+                }
+                
+            },
+            computed: {
+                fullName:{
+                    get(){
+                        return this.Surname + this.Familyname
+                    },
+                    set(value){
+                        this.Surname= value.slice(0,1)
+                        this.Familyname = value.slice(1)
+                    }
+         
+                }   
+
+            }
+        })
+    </script>
+
+</body>
+
+</html>

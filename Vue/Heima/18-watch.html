@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="box">
+            <textarea v-model="words"></textarea>
+    </div>
+    <!-- 准备容器 -->
+    <div id="app">
+
+
+
+    </div>
+    <!-- 引包 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+    <script>
+        const app = new Vue({
+            // 通过el配置选择器，指定 Vue 管理的盒子
+            el: '#app',
+            data: {
+                msg: 'Hello Vue! Using Vue2',
+                words: '',
+                obj: {
+                    words:''
+                }
+            },
+            watch:{
+                words (newValue){
+                    console.log('变化了',oldValue)
+                },
+
+                'obj.words' (newValue){
+                    console.log('变化了',oldValue
+                        
+                    )
+                }
+            }
+        })
+
+
+    </script>
+
+</body>
+
+</html>

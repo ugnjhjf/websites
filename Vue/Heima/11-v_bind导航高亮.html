@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航高亮</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+
+    <div id="app">
+        <ul>
+            <input v-model="targetPrice">输入目标价格</input>
+            <button @click="changePrice(targetItemID, targetPrice)">Set price</button>
+            <br>
+            <input v-model="targetItemID">修改项目</input>
+            <li v-for="(item, index) in ls" :key="item.id">{{ (index + 1) + '. ' + item.name }}</li>
+            <button @click="changeStatus()">Change status</button>
+
+            <div v-if="selected === 1">
+                <li v-for="(item, index) in primeSelect" :key="item.id">{{ (index + 1) + '. ' + item.name + " . " +
+                    item.price }}</li>
+            </div>
+        </ul>
+    </div>
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                selected: 0,
+                ls: [
+                    { id: 1, name: "幻想♂乡精选" },
+                    { id: 2, name: "限时秒杀" },
+                    { id: 3, name: "未知♂领域" }
+                ],
+
+                primeSelect: [
+                    { id: 'p1', name: "德国鸡腿堡", price: 15 },
+                    { id: 'p2', name: "神之笔", price: 30 },
+                    { id: 'p3', name: "传送门", price: 0 }
+                ],
+                targetPrice: 0,
+                targetItemID: ''
+            },
+            methods: {
+                changeStatus() {
+                    this.selected = (this.selected === 1) ? 0 : 1;
+                },
+                changePrice(id, price) {
+                    const item = this.primeSelect.find(item => item.id === id);
+                    if (item) {
+                        item.price = price;
+                    } else {
+                        console.error("Item not found with ID:", id);
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
