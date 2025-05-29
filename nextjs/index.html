@@ -7,16 +7,29 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/jsx">
       const domNode = document.getElementById('app');
-      function header(){
+
+      function Header(){
         return (
-          <header>
             <h1>Welcome to My Next.js App</h1>
-          </header>
         );
       }
 
+      function Content(){
+        return (
+            <p>This is the content of the page.</p>
+        );
+      }
+
+      function HomePage() {
+        return (<div>
+            <Header />
+            <Content />
+        </div>);
+      }
+
       const root = ReactDOM.createRoot(app);
-      root.render(header());
+      root.render(<HomePage />);
+      // This is a simple React component that renders a header
 
     </script>
   </body>
