@@ -7,12 +7,19 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/jsx">
       const domNode = document.getElementById('app');
-
-      function Header(){
+      
+      function Header({ title }) {
         return (
-            <h1>Welcome to My Next.js App</h1>
+            <header>
+              <h1> My first React app </h1>
+        
+                <h3>Input props: {title}</h3>
+                <h3>{`Cool ${title}`}</h3>
+                <h4>Judgement Title: {createTitle(title)}</h4>
+            </header>
         );
       }
+
 
       function Content(){
         return (
@@ -20,12 +27,53 @@
         );
       }
 
+      function createTitle(title){
+        if (title) {
+          return title;
+        } else {
+          return "Default Title";
+        }
+      }
+      
+      /*注释比较40和41行, 叫函数不要使用()不然会循环和报错*/
+
       function HomePage() {
-        return (<div>
-            <Header />
+          const [likes, setLikes] = React.useState(0);
+
+          function handleClick() {
+           setLikes(likes + 1);
+          
+          }
+
+        return (
+          <div>
+            <Header title="React" />
+            <Header title="" />
+
+            <IterationTest />
             <Content />
+            <button onClick={handleClick}>Like({likes})</button>
+            
         </div>);
       }
+
+
+      function IterationTest(){
+        const names =['Echidna','Rokidna','Luna'];
+
+        return(
+          <div>
+           <p> Iteration Test:</p>
+            <ul>
+             {names.map((name) => (
+              <li key={name}>{name}</li>
+             ))}
+            </ul>
+          </div>
+        )
+      }
+
+
 
       const root = ReactDOM.createRoot(app);
       root.render(<HomePage />);
