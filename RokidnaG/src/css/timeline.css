@@ -1,0 +1,207 @@
+    /* Global setting */
+    .container1 {
+        position: relative;
+        padding-left: 2%;
+        border-radius: 15px;
+        color: black;
+        width: 95%;
+        /* background-color: white; */
+        background: rgba(255, 255, 255, .7);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    }
+
+    /* 高斯模糊盒 */
+    .education_box{
+        position: relative;
+        left:5%;
+        padding-left: 2%;
+        border-radius: 15px;
+        color: black;   
+        width: 65%;        
+        background-color: white;
+        background: rgba(255, 255, 255, .7);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(3px);
+    }
+
+    .education_box.education_box_title{
+        color: black;
+        width: 20%;
+        font-size: 3em;
+    }
+    .education_box.activities_box_title{
+        color: black;
+        width: 35%;
+        font-size: 3em;
+    }
+
+
+     .service_box{
+        position: relative;
+        left: 5%;
+        padding-left: 2%;
+        border-radius: 15px;
+        color: black;
+        width: 100%;
+
+        background: rgba(144, 161, 188, 0.8);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(5px);
+        }
+
+        .service_box.service_box_title{
+            color: red;
+            width: 45%;
+            font-size: 3em;
+        }
+        
+    ol {
+        margin: 2px;
+        margin-left: 20px;
+        border: 2px;
+        padding: 0px;
+    }
+
+    ol h3 {
+        margin-top: 0;
+    }
+
+    .item-bg {
+        background-color: grey;
+        background-position: -50px -50px;
+        border-radius: 12px;
+        width: 40%;
+        margin: 15px;
+    }
+/* --------------- */
+/* Level 1 Line */
+/* --------------- */
+
+/* PolyU redline 2022-2026 (Level 1) */
+    .polyu-red-line {
+        position: absolute;
+        left: 40px;
+        top: 50px;
+        bottom: 5px;
+        width: 2px;
+        background-color: red;
+        z-index: 20;
+    }
+  
+    .tongji-blue-line {
+        position: absolute;
+        left: 40px;
+        top: 20px;
+        bottom: 0;
+        width: 2px;
+        background-color: blue;
+        z-index: 20;
+    }
+  
+
+/* --------------- */
+/* Level 2 Line */
+/* --------------- */
+    /* General activity timeline (Level 2) */
+    .organizer{
+        font-style: italic;
+        font-size:1em;
+    }
+    .event-title{
+        font-size:1.25em;
+    }
+
+    .award{
+        color: rgb(133, 0, 0)
+    }
+    .company_logo{
+        width: 50%;
+    }
+    .timeline-item {  
+        position: relative;
+        padding-left: 20px;
+    }
+    .timeline-item .line{
+        position: absolute;
+        left: -6%;
+        top: 0;
+        width: 2px;
+        height: 3em;
+        background-color: grey;
+    }
+
+    .timeline-item .activity{
+        background-color: #f79586;
+        width:2px;
+    }
+    .timeline-item .emsd{
+        background-color: #f79586;
+
+        height: 20em;
+    }
+
+    .timeline-item .assignment{
+        background-color: #fcffc9;
+        height: 5.5em;
+    }
+
+    .timeline-it .project{
+        background-color: #00ff7f;
+    }
+
+    .timeline-item .competition{
+        background-color: #00bfff;
+    }
+
+    .timeline-item .certificate{
+        background-color: #28cc9e;
+    }
+
+    /* Company */
+
+    .timeline-item .hkstp {
+        height: 10em
+    }
+    
+/* Events */
+/* Year 1 */
+    .timeline-item .merit{
+        color: orange;
+    }
+    .timeline-item .finalist{
+        color: rgb(156, 236, 127);
+    }
+
+    .timeline-item .secretary{
+        color: firebrick
+    }
+    
+    .timeline-item .hktechathon2023 {
+        height: 3em;
+        /* 字体高度 */
+        background-color: rgba(152, 152, 152, 0.43);
+    }
+    /* Year 2 */
+
+    .silver{
+        color:#FFD700;
+
+    }
+
+/* --------------- */
+/* Logos */
+/* --------------- */
+    /* logo */
+    .polyu-logo {
+        width: 35%;
+        padding: 5px;
+        margin: 15px;
+    }
+    .comp{
+        width:30%
+    }
+    .design{
+        width:30%
+        
+    }
